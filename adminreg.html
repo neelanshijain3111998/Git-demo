@@ -1,0 +1,41 @@
+{% extends 'D.html' %}
+{% block m4 %}
+
+	<!--<form>
+		<p align="center"> <Font size ="8">Registration form</Font></p>
+		<p ><Font size ="6">Name:</Font><input type="text" placeholder="enter first name"></p>
+
+		<p><Font size ="6">Username:</Font><input type="text" placeholder="enter user name"></p>
+		<p><Font size ="6">Address:</Font><textarea></textarea></p>
+		<p><Font size ="6">Date:</Font><input type="Date"></p>
+
+	<p><Font size ="6">Gender:</Font><input type="radio"name="aa">Male<input type="radio"name="aa">Female:</p>
+	<p><Font size ="6">Course:</Font><input type="checkbox">php<input type="checkbox">python<input type="checkbox">ml</p>
+	<p><Font size ="6">City:</Font>
+	   <select>
+	   	<option>option</option>
+	   	<option>kota</option>
+	   	<option>jaipur</option>
+	   	<option>delhi</option>
+	   </select></p>
+	   <p><Font size ="6">upload image:</Font><input type="file"></p>
+	  <p><Font size ="6">Email:</Font><input type="Email"></p>
+	  <p><Font size ="6">password:</Font><input type="password"></p>
+	  <p><input type="Submit" value="Register"><button type="reset">C</Font>lear </button></p>
+</form>-->
+<h1>Admin registration</h1>
+<!--<a href="show students">show all</a>-->
+<form method="post" action="adminreg">
+    <p>name:<input type="text" name="T1" placeholder="enter name"/> </p>
+    <p>address:<input type="text" name="T2" placeholder="enter  branch"/></p>
+    <p>contact:<input type="text" name="T3" placeholder="enter rollno "/></p>
+    <p>email:<input type="email" name="T4" placeholder="enter contact no"/></p>
+    <p>branch:<input type="text" name="T5"/></p>
+    <p>password:<input type="password" name="T6"/></p>
+    <p>confirm_password<input type="password" name="T7"/></p>
+    <p><input type="Submit" value="Register"/></p>
+</form>
+   {% if kota %}
+        <h3>{{ kota }}</h3>
+    {% endif %}
+{% endblock %}

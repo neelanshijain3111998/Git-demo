@@ -1,0 +1,28 @@
+{% extends 'D.html' %}
+{% block m4 %}
+
+<h1>Admin profile</h1>
+{% if data %}
+    <form method="post" action="admin_profile">
+        <p>name :<input  type="text" value=" {{ data[0] }}" name="T1"/> </p>
+        <p>address :<input value=" {{ data[1] }}" type="text" name="T2"/> </p>
+        <p>contact :<input value=" {{ data[2] }}" type="text" name="T3"/> </p>
+        <p>email:<input type="email" name="T4" readonly value=" {{ data[3] }}"/></p>
+        <p><input type="submit" value="Save changes" name="B1"/></p>
+    </form>
+{% elif msg %}
+    <h2 style="color:#f00;">{{msg}}</h2>
+{% endif %}
+
+{% if photo %}
+    {% if photo=='no' %}
+     <p><a href="admin_photo">Upload photo</a></p>
+    {% else %}
+    <img src="../static/photos/{{photo}}" width="100" height="100"/>
+    <br/>
+    <p><a href="change_adminphoto">Change photo</a></p>
+    {% endif %}
+{% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../static/css/A.css" rel ="stylesheet" type="text/css">
+</head>
+<body>
+<div id="main">
+	<div id="wrapper">
+    	<div id="header">
+        	<h1 id="title">ADMIN HOME</h1>
+         </div>
+         <div id="menu">
+         	<ul id="a3">
+            	<li><a href="/">Home</a></li>
+                <li><a href="adminreg">New admins</a></li>
+                <li><a href="studentreg">New student</a></li>
+                <li><a href="logindata">students</a></li>
+                <li><a href="showadmins">admins</a></li>
+                 <li><a href="admin_profile">profile</a></li>
+                  <li><a href="change_password_admin">change password</a></li>
+                   <li><a href="logout">logout</a></li>
+            </ul>
+          </div>
+          <div id="middle">
+              {% block m1 %}
+                  {% endblock %}
+
+
+
+                 <!--<h1>welcome to home page</h1>-->
+
+
+          </div>
+
+
+          <div id="footer">
+               <h1>copyright &copy; neelanshi jain </h1>
+          </div>
+    </div>
+</div>
+
+</body>
+</html>
